@@ -1,4 +1,8 @@
-nav {
+header{
+    color: blue;
+}
+
+/* nav {
     display: flex;
     justify-content: space-between;
     background-color: rgb(45, 195, 225);
@@ -20,4 +24,4 @@ nav ul li {
 
 nav ul li a {
     color: white;
-}
+} */

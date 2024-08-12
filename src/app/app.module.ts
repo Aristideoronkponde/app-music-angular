@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { SeachComponent } from './seach/seach.component';
 import { AlbumDescriptionComponent } from './album-description/album-description.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
+import { PaginateComponent } from './paginate/paginate.component';
+import { AudioPlayerComponent } from './audio-player/audio-player.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AlbumDetailsComponent } from './album-details/album-details.component';
     SeachComponent,
     AlbumDescriptionComponent,
     AlbumDetailsComponent,
+    PaginateComponent,
+    AudioPlayerComponent,
     
   ],
   imports: [
