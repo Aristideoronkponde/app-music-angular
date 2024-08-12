@@ -1,0 +1,31 @@
+<div *ngFor="let album of albums; let i = index">
+  <article class="bg-white shadow-lg px-2 pb-10 rounded-lg">
+    <div class="font-bold bg-purple-200 py-2">{{ album.ref }}</div>
+    <div>
+      <h2 class="font-bold text-2xl my-4">{{ album.title }}</h2>
+      <p class="text-base">{{ album.description }}</p>
+
+      <p *ngIf="album.duration" class="my-4">
+        Duration: {{ album.duration }} minutes
+      </p>
+      <p *ngIf="album.like" class="my-4">Like: {{ album.like }}</p>
+
+      <span *ngFor="let tag of album.tags">{{ tag }}</span>
+      <button>en</button>
+    <span>5</span>
+    <span>{{album.duration}}</span>
+    <button>Details</button>
+
+      <!-- <img
+        src="https://unsplash.it/860/468"
+        alt="description"
+        class="my-4 block mx-auto max-w-full object-cover"
+      /> -->
+    </div>
+
+    <!-- <h2>{{album.title}}</h2>
+    <p>{{album.description}}</p>
+    <span class="tag" *ngFor="let tag of album.tags">{{tag}}</span><br>-->
+    
+  </article>
+</div>

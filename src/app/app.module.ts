@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { AlbumComponent } from './album/album.component';
 import { LoginComponent } from './login/login.component';
+import { SeachComponent } from './seach/seach.component';
+import { AlbumDescriptionComponent } from './album-description/album-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     AlbumComponent,
-    LoginComponent
+    LoginComponent,
+    SeachComponent,
+    AlbumDescriptionComponent
   ],
   imports: [
     BrowserModule,
