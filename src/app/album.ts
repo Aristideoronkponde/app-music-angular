@@ -10,6 +10,7 @@ export interface Album {
   like?: string;
   tags?: Array<string>;
 };
+
 export type List = {
     id: string;
     list: string[];

@@ -1,1 +1,21 @@
-<p>album-details works!</p>
+<div *ngIf="album" class="album-detail">
+    <img [src]="album.url" [alt]="album.title" />
+    <h2>{{ album.title }}</h2>
+    <p>Name: {{ album.name }}</p>
+    <button>Play</button>
+    <h3>List of songs</h3>
+    <ul>
+      <li *ngFor="let song of album.tags">{{ song }}</li>
+    </ul>
+    <div class="album-info">
+      <h3>{{ album.status }}</h3>
+      <p>{{ album.description }}</p>
+      <div class="tags">
+        <span *ngFor="let tag of album.tags" class="tag">{{ tag }}</span>
+      </div>
+      <div class="album-meta">
+        <span>Duration: {{ album.duration }} sec</span>
+        <span class="likes" *ngIf="album.like">{{ album.like }}</span>
+      </div>
+    </div>
+  </div>

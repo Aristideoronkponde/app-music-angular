@@ -2,7 +2,9 @@
   <article >
     <div class="ref">{{ album.ref }}</div>
     <div>
-      <h2 >{{ album.title }}</h2>
+      
+      <a class="nav-link active" routerLink="/album/{{album.id}}"><h2 >{{ album.title }}</h2></a>
+
       <p >{{ album.description }}</p>
 
       <p *ngIf="album.duration">
@@ -17,7 +19,9 @@
       <button>en</button>
     <span>5</span>
     <span>{{album.duration}}</span>
-    <button>Details</button>
+    <button
+    
+    >Details</button>
 
       <!-- <img
         src="https://unsplash.it/860/468"
@@ -32,3 +36,4 @@
     
   </article>
 </div>
+
