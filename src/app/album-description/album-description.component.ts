@@ -13,14 +13,11 @@ export class AlbumDescriptionComponent {
   albumId!: string;
   albums?: Album[]=ALBUMS;
   album?:Album[];
-  selectedAlbum: Album | null = null;
-  currentSongIndex = 0;
-  isPlaying = false;
-  progress = 0
+  asideAlbum!:any;
 
   constructor(
     private AlbumsService: AlbumService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
@@ -33,5 +30,13 @@ export class AlbumDescriptionComponent {
    
       
     })
+  }
+
+
+  getAside(id : string):void{
+    this.asideAlbum = this.AlbumsService.getAlbumById(id)
+   console.log(this.album);
+ 
+   
   }
 }

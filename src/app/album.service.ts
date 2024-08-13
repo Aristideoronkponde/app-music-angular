@@ -16,5 +16,11 @@ albums:Album []=ALBUMS;
   getalbums():Album[]{
     return this.albums
   }
+
+
+  getAlbumById(id:string){
+    const album = this.albums.find((album:Album)=>album.id === id)
+    return album;
+  }
   
 }

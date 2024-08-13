@@ -1,39 +1,42 @@
-<div *ngFor="let album of albums; let i = index" class="article">
-  <article >
-    <div class="ref">{{ album.ref }}</div>
-    <div>
-      
-      <a class="nav-link active" routerLink="/album/{{album.id}}"><h2 >{{ album.title }}</h2></a>
-
-      <p >{{ album.description }}</p>
-
-      <p *ngIf="album.duration">
-        Duration: {{ album.duration }} minutes
-      </p>
-      <p *ngIf="album.like" >Like: {{ album.like }}</p>
-
+<div class="container">
+  <div *ngFor="let album of albums; let i = index" class="article">
+    <article >
+      <div class="ref">{{ album.ref }}</div>
+      <div>
         
-            <span  *ngFor="let tag of album.tags"><button class="tag">{{ tag }}</button></span><br>
+        <a class="nav-link active" routerLink="/album/{{album.id}}"><h2 >{{ album.title }}</h2></a>
+  
+        <p >{{ album.description }}</p>
+  
+        <p *ngIf="album.duration">
+          Duration: {{ album.duration }} minutes
+        </p>
+        <p *ngIf="album.like" >Like: {{ album.like }}</p>
+  
+          
+              <span  *ngFor="let tag of album.tags"><button class="tag">{{ tag }}</button></span><br>
+          
         
+        <button>en</button>
+      <span>5</span>
+      <span>{{album.duration}}</span>
+      <button (click)="getAside(album.id)">Details</button>
+  
+        <!-- <img
+          src="https://unsplash.it/860/468"
+          alt="description"
+          class="my-4 block mx-auto max-w-full object-cover"
+        /> -->
+      </div>
+  
+      <!-- <h2>{{album.title}}</h2>
+      <p>{{album.description}}</p>
+      <span class="tag" *ngFor="let tag of album.tags">{{tag}}</span><br>-->
       
-      <button>en</button>
-    <span>5</span>
-    <span>{{album.duration}}</span>
-    <button
-    
-    >Details</button>
-
-      <!-- <img
-        src="https://unsplash.it/860/468"
-        alt="description"
-        class="my-4 block mx-auto max-w-full object-cover"
-      /> -->
-    </div>
-
-    <!-- <h2>{{album.title}}</h2>
-    <p>{{album.description}}</p>
-    <span class="tag" *ngFor="let tag of album.tags">{{tag}}</span><br>-->
-    
-  </article>
+    </article>
+  </div>
+  <app-album-details [asideAlbum]="asideAlbum" ></app-album-details>
 </div>
+
+
 
