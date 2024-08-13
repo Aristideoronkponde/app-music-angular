@@ -1,8 +1,8 @@
 <div *ngIf="asideAlbum" class="asideAlbum-detail">
-    <img [src]="asideAlbum.url" [alt]="asideAlbum.title" />
+    <img [src]="asideAlbum.url" [alt]="asideAlbum.title"  width="200px"/>
     <h2>{{ asideAlbum.title }}</h2>
     <p>Name: {{ asideAlbum.name }}</p>
-    <button>Play</button>
+    <button class="btn btn-primary">Play</button>
     <h3>List of songs</h3>
     <ul>
       <li *ngFor="let song of asideAlbum.tags">{{ song }}</li>

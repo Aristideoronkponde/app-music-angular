@@ -33,6 +33,7 @@ export class AlbumDescriptionComponent {
   }
 
 
+
   getAside(id : string):void{
     this.asideAlbum = this.AlbumsService.getAlbumById(id)
    console.log(this.album);
